@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+body {
+    color: darkgray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* BASE OF CCS FILE */
+
+
+header {
+    border-bottom: 1px solid black;
+}
+
+nav {
+    margin: auto;
+    width: fit-content;
+    padding: 20px;
+}
+
+.list li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.list li a {
+    transition: 0.3s;
+}
+
+.list li a:hover {
+    color: rgb(28, 28, 196);
+}
+
+.dropdown,
+.dropdown ul {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: fit-content;
+    width: max-content;
+    animation: showDropDown 1 0.4s linear;
+}
+
+.dropdown {
+    top: 20px;
+}
+
+.dropdown-frontend {
+    top: 5px;
+}
+
+.dropdown-backend {
+    top: 35px;
+}
+
+.dropdown-database {
+    top: 65px;
+}
+
+@keyframes showDropDown {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.dropdown li {
+    border-bottom: 1px solid black;
+    margin: 0;
+    padding: 5px;
+    display: block;
+    transition: 0.3s;
+}
+
+.dropdown li:last-child {
+    border-bottom: none;
+    background-color: rgb(220, 220, 220);
+}
+
+.dropdown li:first-child {
+    background-color: rgb(220, 220, 220);
+}
+
+.dropdown li:hover {
+    background-color: rgb(241, 255, 159);
+}
+
+.services {
+    position: relative;
+}
+
+.services:hover .dropdown {
+    display: block;
+}
+
+.dropdown li:hover .dropdown-frontend,
+.dropdown li:hover .dropdown-backend,
+.dropdown li:hover .dropdown-database {
+    display: block;
+    margin-left: 70px;
+}
